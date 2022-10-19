@@ -8,3 +8,11 @@
 .search > * {
   padding:5px;
 }
+
+.searchIcon{
+  position: relative;
+  bottom: 95%;
+  right: 32px;
+  /* transform: translateY(-50%); */
+  cursor: pointer;
+}
