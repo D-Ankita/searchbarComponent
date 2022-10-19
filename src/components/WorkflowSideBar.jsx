@@ -25,7 +25,7 @@
 //           value={inputText}
 //           icon='SearchSmall'
 //         />
-//         <Icon icon="ErrorWhite" onClick={cancelHandeler} data-testid="icon" />
+//         <Icon icon="ErrorWhite" onClick={cancelHandeler} data-testid="icon"  className="searchIcon"/>
 //       </div>
 //       <WorkflowSearchList input={inputText} />
 //     </div>
@@ -78,7 +78,7 @@ const WorkflowSideBar = () => {
           value={inputText}
           icon='SearchSmall'
         />
-        <Icon icon="ErrorWhite" onClick={cancelHandeler} data-testid="icon" />
+        <Icon icon="ErrorWhite" onClick={cancelHandeler} data-testid="icon"  className="searchIcon" />
       </div>
       <WorkflowSearchList input={inputText} />
     </div>
