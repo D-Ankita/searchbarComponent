@@ -1,18 +1,42 @@
 [
 	{
-		"id":1,
-		"Desc":"Technology Team"
+		"id": 1,
+		"Desc": "Technology Team"
 	},
 	{
-		"id":2,
-		"Desc":"Current Affairs Team"
+		"id": 2,
+		"Desc": "Current Affairs Team"
 	},
 	{
-		"id":3,
-		"Desc":"Content Ninja Team"
+		"id": 3,
+		"Desc": "Content Ninja Team"
 	},
 	{
-		"id":4,
-		"Desc":"Live News"
+		"id": 4,
+		"Desc": "Live News"
+	},
+	{
+		"id": 5,
+		"Desc": "Mobile Team"
+	},
+	{
+		"id": 6,
+		"Desc": "Election Campaign"
+	},
+	{
+		"id": 7,
+		"Desc": "Entertainment Team"
+	},
+	{
+		"id": 8,
+		"Desc": "Science Team"
+	},
+	{
+		"id": 9,
+		"Desc": "Sports Editorial Team"
+	},
+	{
+		"id": 10,
+		"Desc": "Homepage Publish"
 	}
 ]
