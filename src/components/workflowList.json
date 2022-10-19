@@ -1,0 +1,18 @@
+[
+	{
+		"id":1,
+		"Desc":"Technology Team"
+	},
+	{
+		"id":2,
+		"Desc":"Current Affairs Team"
+	},
+	{
+		"id":3,
+		"Desc":"Content Ninja Team"
+	},
+	{
+		"id":4,
+		"Desc":"Live News"
+	}
+]
