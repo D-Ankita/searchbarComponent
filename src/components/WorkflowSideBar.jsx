@@ -25,7 +25,7 @@
 //           value={inputText}
 //           icon='SearchSmall'
 //         />
-//         <Icon icon="ErrorWhite" onClick={cancelHandeler} data-testid="icon"  className="searchIcon"/>
+//         <Icon icon="ErrorWhite" onClick={cancelHandeler} data-testid="icon" />
 //       </div>
 //       <WorkflowSearchList input={inputText} />
 //     </div>
@@ -48,12 +48,13 @@
 
 
 import React, { useState } from "react";
+import '@contentstack/venus-components/build/main.css'
 import WorkflowSearchList from "./WorkflowSearchList"
 import './WorkflowSidebar.css'
 import { searchAtom } from "../store";
 import { useAtom } from "jotai";
 
-import { Icon, TextInput } from "@contentstack/venus-components";
+import { Icon, Search, TextInput } from "@contentstack/venus-components";
 
 const WorkflowSideBar = () => {
   // const [inputText, setInputText] = useState("");
@@ -69,7 +70,8 @@ const WorkflowSideBar = () => {
 
   return (
     <div className="main">
-      <h1>Workflow Component</h1>
+      <h1>Workflow-js Component</h1>
+      
       <div className="search">
         <TextInput
           id="outlined-basic"
@@ -77,8 +79,10 @@ const WorkflowSideBar = () => {
           placeholder="Search"
           value={inputText}
           icon='SearchSmall'
+          width='medium'
+          role='textbox'
         />
-        <Icon icon="ErrorWhite" onClick={cancelHandeler} data-testid="icon"  className="searchIcon" />
+        <Icon icon="ErrorWhite" onClick={cancelHandeler} data-testid="icon" className="searchIcon"/>
       </div>
       <WorkflowSearchList input={inputText} />
     </div>

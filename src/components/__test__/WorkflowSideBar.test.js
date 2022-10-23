@@ -1,63 +1,51 @@
 import { render, screen,fireEvent } from '@testing-library/react';
 import WorkflowSideBar from "../WorkflowSideBar"
 
-// describe("WorkflowSideBar", ()=>{
-// 	it('should pass correct input to data test input ' , () => {
-// 		render(
-// 			<WorkflowSideBar />
-// 			//mock workflow search list
-// 			//render workflow side bar
-// 			// find the input element using rtl -- data test id
-// 			//type in input box using rtl
-// 			//check if the mockedSearchList  -->input is matched
-// 		)
-// 	})
-// })
 
+describe("workflow sidebar",()=>{
+  beforeEach(()=>{
+    render(
+      <WorkflowSideBar />
+    )
+  })
 
-test('renders searchbar text', () => {
-    render(<WorkflowSideBar />);
+  test('check correct search result  when searched for word - Live', () => {
     const inputElement = screen.getByRole('textbox');
-    const buttonElement = screen.getByTestId("icon");
-    fireEvent.click(inputElement)
-    fireEvent.change(inputElement, { target: { value: "L" }, });
-    // fireEvent.click(buttonElement)
-    const divElement = screen.getAllByRole('listItem');
-    expect(divElement.length).toBe(2)
-  });
-
-
-  test('check correct search result', () => {
-    render(<WorkflowSideBar />);
-    const inputElement = screen.getByRole('textbox');
-    const buttonElement = screen.getByTestId("icon");
     fireEvent.click(inputElement)
     fireEvent.change(inputElement, { target: { value: "Live" }, });
-    // fireEvent.click(buttonElement)
-    const divElement = screen.queryByText(/Content Ninja Team/i);
-    expect(divElement).toBeNull()
+    const divElement = screen.queryByText(/Live News/i);
+    expect(divElement).toBeInTheDocument
   });
 
 
-  test('on clicking cancel icon,  render all elements', () => {
-    render(<WorkflowSideBar />);
+  test('check correct search result when searched for letter  - L ', () => {
     const inputElement = screen.getByRole('textbox');
-    const buttonElement = screen.getByTestId("icon");
     fireEvent.click(inputElement)
-    fireEvent.change(inputElement, { target: { value: "Ank" }, });
-    fireEvent.click(buttonElement)
+    fireEvent.change(inputElement, { target: { value: "L" }, });
     const divElement = screen.getAllByRole('listItem');
-    expect(divElement.length).toBe(4)
+    expect(divElement.length).toBe(6)
   });
 
-
-  test('on if element searched is not present, renders Zero List Items', () => {
-    render(<WorkflowSideBar />);
+  test(' if element searched is not present, renders Zero List Items', () => {
     const inputElement = screen.getByRole('textbox');
-    const buttonElement = screen.getByTestId("icon");
     fireEvent.click(inputElement)
     fireEvent.change(inputElement, { target: { value: "Ank" }, });
     // fireEvent.click(buttonElement)
     const divElement = screen.queryAllByRole('listItem');
     expect(divElement.length).toBe(0)
   });
+
+  
+
+  test('on clicking cancel icon,  render all elements', () => {
+    const inputElement = screen.getByRole('textbox');
+    const buttonElement = screen.getByTestId("icon");
+    fireEvent.click(inputElement)
+    fireEvent.change(inputElement, { target: { value: "Ank" }, });
+    fireEvent.click(buttonElement)
+    const divElement = screen.getAllByRole('listItem');
+    expect(divElement.length).toBe(10)
+  });
+
+  
+});

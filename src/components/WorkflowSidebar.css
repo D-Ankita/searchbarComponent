@@ -16,3 +16,11 @@
   /* transform: translateY(-50%); */
   cursor: pointer;
 }
+
+.textBox{
+  background-color: #edf1f7;
+    border-radius: 8px;
+    width: 250px;
+    margin: 10px;
+    padding: 9px;
+}
